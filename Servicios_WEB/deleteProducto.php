@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo json_encode($response);
     } else {
         $idProd = $objArray['idprod'];
-        $result = mysqli_query($Cn, "DELETE FROM productos WHERE idprod=$idprod");
+        $result = mysqli_query($Cn, "DELETE FROM productos WHERE idprod=$idProd");
         if ($result) {
             $producto["success"] = 200; // El success=200 es que encontro eñ producto
             $producto["message"] = "Producto Eliminado";
